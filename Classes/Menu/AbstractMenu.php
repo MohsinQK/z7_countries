@@ -105,6 +105,7 @@ abstract class AbstractMenu implements MenuInterface
         $uriBuilder = $this->uriBuilder->reset()
             ->setTargetPageUid($this->pageId)
             ->setCreateAbsoluteUri(false)
+            ->setAddQueryString(true)
             ->setLanguage((string)$language->getLanguageId());
 
         if ($url = $uriBuilder->build()) {
